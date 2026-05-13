@@ -1,5 +1,5 @@
 
-![CI](https://github.com/ArchAngel77/cicd/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/ArchAngel77/learn-cicd-starter/actions/workflows/ci.yml/badge.svg)
 
 # learn-cicd-starter (Notely)
 
