@@ -8,6 +8,7 @@ import (
 	"net/http"
 	"os"
 	"strconv"
+	"time"
 
 	"github.com/go-chi/chi"
 	"github.com/go-chi/cors"
@@ -22,6 +23,7 @@ type apiConfig struct {
 	DB *database.Queries
 }
 
+//go:embed static/*
 var staticFiles embed.FS
 
 func main() {
@@ -91,7 +93,7 @@ func main() {
 	srv := &http.Server{
 		Addr:    ":" + port,
 		Handler: router,
-		ReadHeaderTimeout: time.Second * 5
+		ReadHeaderTimeout: time.Second * 5,
 	}
 
 	log.Printf("Serving on port: %s\n", strconv.Quote(port))
