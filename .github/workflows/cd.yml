@@ -30,5 +30,8 @@ jobs:
       - name: Set up Cloud SDK
         uses: google-github-actions/setup-gcloud@v2
 
+      - name: Show build command
+        run: echo "gcloud builds submit --tag us-central1-docker.pkg.dev/aerobic-orbit-496518-e0/notely/notely:latest ."
+
       - name: Build and push Docker image
         run: gcloud builds submit --tag us-central1-docker.pkg.dev/aerobic-orbit-496518-e0/notely/notely:latest .
