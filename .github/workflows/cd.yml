@@ -42,6 +42,9 @@ jobs:
       - name: Build and push Docker image
         run: gcloud builds submit --tag us-central1-docker.pkg.dev/aerobic-orbit-496518-e0/notely/notely:latest .
 
+      - name: Debug DATABASE_URL
+        run: echo "DATABASE_URL length=${#DATABASE_URL}"
+
       - name: Run migrations
         run: ./scripts/migrateup.sh
 
